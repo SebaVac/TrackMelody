@@ -1,0 +1,84 @@
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 3em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+.navBar {
+  background: #000000; 
+  background: -webkit-linear-gradient(to top, #4ca8ff, #7F00FF); 
+  background: linear-gradient(to top, #4ca8ff, #7F00FF);
+}
+
+.card{
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+.premiumCard{
+  color: aliceblue;
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.margenCard{
+  border: 5em;
+  border-color: #f394ff;
+  padding-top: 2em !important;
+}
+
+/*Side Bar */
+.sidebar {
+  text-align: left;
+  width: 14em;
+  height: 100vh;
+  background-color: #1d0628;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 2em;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.violet-container {
+  background-color: #300742;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  height: auto;
+}
+
+.light-container {
+  background-color: #ffffff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  height: auto;
+}
+/*Premium*/
+.Premium{
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  color: #000000;
+}

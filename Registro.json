@@ -1,0 +1,33 @@
+{
+    "formulario": {
+      "campos": [
+        {
+          "nombre": "nombre",
+          "tipo": "texto",
+          "etiqueta": "Nombre",
+          "requerido": true
+        },
+        {
+          "nombre": "nombre",
+          "tipo": "texto",
+          "etiqueta": "Apellido",
+          "requerido": true
+        },
+        {
+          "nombre": "correo",
+          "tipo": "correo",
+          "etiqueta": "Correo electronico",
+          "requerido": true
+        },
+        {
+          "nombre": "contrasena",
+          "tipo": "contrasena",
+          "etiqueta": "Contrasena",
+          "requerido": true
+        }
+      ],
+      "enviar_url": "http://localhost:5173/registro",
+      "metodo_envio": "POST"
+    }
+  }
+  

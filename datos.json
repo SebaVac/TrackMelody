@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Felipe",
+      "apellido": "Godoy",
+      "correo": "Felipe1@gmail.com",
+      "contrasena": "12ab"
+    },
+    {
+      "id": 2,
+      "name": "Ignacio",
+      "apellido": "Nunez" ,
+      "correo": "prueba2@gmail.com",
+      "contrasena": "23bc"
+    },
+    {
+      "id": 3,
+      "name": "Seba",
+      "apellido": "Saavedra",
+      "correo": "prueba3@gmail.com",
+      "contrasena": "34cd"
+    }
+  ]

@@ -1,0 +1,20 @@
+{
+    "formulario":{
+        "campos": [
+            {
+                "nombre": "correo",
+                "tipo": "correo",
+                "etiqueta": "Correo electronico",
+                "requerido": true
+            },
+            {
+                "nombre": "contrasena",
+                "tipo": "contrasena",
+                "etiqueta": "Contrasena",
+                "requerido": true  
+            }
+        ],
+        "enviar_url": "http://localhost:5173/Login",
+        "metodo_envio": "POST"
+    }
+}
