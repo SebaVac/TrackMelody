@@ -43,6 +43,51 @@ app.post('/api/registro', (req, res) => {
   res.json({ message: 'Los datos del formulario se han guardado correctamente' });
 });
 
+// Método GET para obtener los datos del formulario desde el archivo JSON
+app.get('/api/registro', (req, res) => {
+  try {
+    const data = fs.readFileSync('registro.json');
+    const formData = JSON.parse(data);
+    res.json(formData);
+  } catch (error) {
+    console.log('Error al leer el archivo JSON de registro', error);
+    res.status(500).json({ error: 'Error al obtener los datos del formulario' });
+  }
+});
+
+// Método DELETE para eliminar los datos del formulario
+app.delete('/api/registro', (req, res) => {
+  try {
+    fs.unlinkSync('registro.json');
+    res.json({ message: 'Los datos del formulario han sido eliminados correctamente' });
+  } catch (error) {
+    console.log('Error al eliminar el archivo JSON de registro', error);
+    res.status(500).json({ error: 'Error al eliminar los datos del formulario' });
+  }
+});
+
+// Método PUT para actualizar los datos del formulario
+app.put('/api/registro', (req, res) => {
+  const updatedData = req.body;
+
+  // Lee el archivo JSON existente
+  let existingData = [];
+  try {
+    const data = fs.readFileSync('registro.json');
+    existingData = JSON.parse(data);
+  } catch (error) {
+    console.log('No se encontró ningún archivo JSON existente');
+  }
+
+  // Actualiza los datos existentes con los nuevos datos
+  existingData = updatedData;
+
+  // Guarda los datos actualizados en el archivo JSON
+  fs.writeFileSync('registro.json', JSON.stringify(existingData));
+
+  res.json({ message: 'Los datos del formulario se han actualizado correctamente' });
+});
+
 // Inicia el servidor
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
